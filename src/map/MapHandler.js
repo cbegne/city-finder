@@ -8,11 +8,10 @@ export const MapHandler = ({ children }) => {
 
   useEffect(() => {
     const findSelectedCityData = () => {
-      if (selectedCity) {
-        const result = cities.find((elem) => elem.city === selectedCity);
-        setSelectedCityData(result);
-      }
+      const result = cities.find((elem) => elem.city === selectedCity);
+      setSelectedCityData(result);
     };
+
     if (selectedCity) {
       findSelectedCityData();
     }
